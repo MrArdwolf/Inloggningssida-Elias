@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.primary-button {
+  @include button-style($primary-color, $black-color);
+
+  &:hover {
+    @include button-hover;
+  }
+}
+
+// .secondary-button {
+//   @include button-style($secondary-color, $primary-color);
+
+//   &:hover {
+//     @include button-hover;
+//   }
+// }
+
+// .text-button {
+//   @include button-style(transparent, $primary-color, 0px, 0px);
+//   border: none;
+//   box-shadow: none;
+
+//   &:hover {
+//     @include button-hover;
+//   }
+// }
