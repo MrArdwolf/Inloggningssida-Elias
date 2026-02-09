@@ -4,24 +4,15 @@
   @include button-style($primary-color, $black-color);
 
   &:hover {
-    @include button-hover;
+    @include button-hover($secondary-color);
   }
 }
 
-// .secondary-button {
-//   @include button-style($secondary-color, $primary-color);
+.link-button {
+  @include button-style(transparent, $primary-color, 0, 0);
+  box-shadow: none;
 
-//   &:hover {
-//     @include button-hover;
-//   }
-// }
-
-// .text-button {
-//   @include button-style(transparent, $primary-color, 0px, 0px);
-//   border: none;
-//   box-shadow: none;
-
-//   &:hover {
-//     @include button-hover;
-//   }
-// }
+  &:hover {
+    @include text-hover($secondary-color);
+  }
+}

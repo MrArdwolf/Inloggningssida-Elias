@@ -9,30 +9,27 @@
 </head>
 
 <body>
-    <div class="title-row">
-        <h1>Logga in</h1>
-        <p>Saknar du konto? <a href="#">Registrera</a></p>
-    </div>
-    <form id="login-form">
-        <div class="inputs">
-            <div class="input-row">
-                <label for="username">Användarnamn:</label>
-                <input type="text" name="username" id="username-input">
-            </div>
-            <div class="input-row">
-                <label for="password">Lösenord:</label>
-                <input type="password" name="password" id="password-input">
-            </div>
-
-            <div class="input-row">
-                <button type="submit">Logga in</button>
-            </div>
-
-            <div class="input-row">
-                <a href="">Glömt lösenord?</a>
-            </div>
+    <div class="login-page">
+        <div class="title-row">
+            <h1>Logga in</h1>
+            <p>Saknar du konto? <a class="link-button" href="#">Registrera</a></p>
         </div>
-    </form>
+        <form id="login-form">
+            <div class="inputs">
+                <div class="input-row">
+                    <label for="username">Användarnamn:</label>
+                    <input class="input-text" type="text" name="username" id="username-input" autocomplete="username" placeholder="Användarnamn">
+                </div>
+                <div class="input-row">
+                    <label for="password">Lösenord:</label>
+                    <input class="input-text" type="password" name="password" id="password-input" placeholder="Lösenord" autocomplete="current-password">
+                </div>
+            </div>
+
+            <button class="primary-button submit-button" type="submit">Logga in</button>
+            <a class="link-button forgot-password" href="#">Glömt lösenord?</a>
+        </form>
+    </div>
 </body>
 
 </html>
