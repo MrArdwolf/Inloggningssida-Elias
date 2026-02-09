@@ -1,0 +1,5 @@
+@use '../utils' as *;
+
+.input-text {
+    @include input-text($input-background-color, $black-color, $primary-color, $secondary-color);
+}

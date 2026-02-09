@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.primary-button {
+  background-color: #25E7A3;
+  color: #000000;
+  padding: 8px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+.primary-button:hover {
+  cursor: pointer;
+  background-color: #1AC7BE;
+}
+
+.link-button {
+  background-color: transparent;
+  color: #25E7A3;
+  padding: 0 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  box-shadow: none;
+}
+.link-button:hover {
+  cursor: pointer;
+  color: #1AC7BE;
+}
+
+.input-text {
+  background-color: #f1f1f1;
+  color: #000000;
+  padding: 8px 8px;
+  border-radius: 8px;
+  border: 2px solid #25E7A3;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+.input-text::placeholder {
+  color: #626262;
+  font-style: italic;
+}
+.input-text:focus {
+  outline: none;
+  border-color: #1AC7BE;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #282828;
+  width: 100%;
+  align-items: center;
+  max-width: 440px;
+  gap: 24px;
+  padding: 50px;
+}
+.login-page .title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+.login-page .title-row h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+.login-page form .inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.login-page form .inputs .input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.login-page form .inputs .input-row label {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.login-page form .submit-button {
+  width: 100%;
+}
+.login-page form .forgot-password {
+  align-self: flex-end;
+}/*# sourceMappingURL=main.css.map */
