@@ -8,28 +8,29 @@
     <title>Inloggningssida</title>
 </head>
 
-<body>
-    <div class="login-page">
+<body id="body">
+    <div class="login-page" id="login-page">
         <div class="title-row">
             <h1>Logga in</h1>
-            <p>Saknar du konto? <a class="link-button" href="#">Registrera</a></p>
+            <p>Saknar du konto? <a class="link-button" id="register-link">Registrera</a></p>
         </div>
         <form id="login-form">
             <div class="inputs">
                 <div class="input-row">
                     <label for="username">Användarnamn:</label>
-                    <input class="input-text" type="text" name="username" id="username-input" autocomplete="username" placeholder="Användarnamn">
+                    <input class="input-text" type="text" name="username" id="username-input" autocomplete="username" placeholder="Användarnamn" required>
                 </div>
                 <div class="input-row">
                     <label for="password">Lösenord:</label>
-                    <input class="input-text" type="password" name="password" id="password-input" placeholder="Lösenord" autocomplete="current-password">
+                    <input class="input-text" type="password" name="password" id="password-input" placeholder="Lösenord" autocomplete="current-password" required>
                 </div>
             </div>
 
             <button class="primary-button submit-button" type="submit">Logga in</button>
-            <a class="link-button forgot-password" href="#">Glömt lösenord?</a>
         </form>
     </div>
+
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
