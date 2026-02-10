@@ -11,7 +11,7 @@ registerPage.id = 'register-page';
 
 const credError = document.createElement('p');
 
-const users = JSON.parse(localStorage.getItem('users'));
+const users = JSON.parse(localStorage.getItem('users')) || [];
 
 if (document.getElementById('login-page')) {
     const loginForm = document.getElementById('login-form');
@@ -37,7 +37,7 @@ if (document.getElementById('login-page')) {
             return;
         }
 
-        if (!users) {
+        if (users.length === 0) {
             credError.textContent = 'Inga användare registrerade. Vänligen registrera ett konto först.';
             credError.style.color = 'red';
             loginForm.appendChild(credError);
@@ -154,19 +154,22 @@ function showRegisterPage() {
                 return;
             }
 
-            const existingUser = users.find(user => user.username === username);
+                const existingUser = users.find(user => user.username === username);
 
-            if (existingUser) {
-                credError.textContent = 'Användarnamnet är redan taget. Vänligen välj ett annat.';
-                credError.style.color = 'red';
-                registerForm.appendChild(credError);
-                return;
-            }
+                if (existingUser) {
+                    credError.textContent = 'Användarnamnet är redan taget. Vänligen välj ett annat.';
+                    credError.style.color = 'red';
+                    registerForm.appendChild(credError);
+                    return;
+                }
 
             users.push({ username: username, password: password });
             localStorage.setItem('users', JSON.stringify(users));
             body.replaceChild(loginPage, registerPage);
-            
+            document.getElementById('login-form').removeChild(credError);
+            document.getElementById('username-input').value = '';
+            document.getElementById('password-input').value = '';
+
             alert('Registrering lyckades! Du kan nu logga in med dina uppgifter.');
         });
     }
